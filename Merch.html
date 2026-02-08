@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NNZ — Merch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top header (mockup-style) -->
+ <header class="topbar" role="banner"
+  style="position:sticky; top:0; z-index:40; border-radius:0; border-left:0; border-right:0; border-top:0;
+         display:grid; grid-template-columns: 1fr auto 1fr; align-items:center;">
+
+  <!-- Left -->
+  <div style="display:flex; align-items:center; gap:12px; justify-self:start;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid var(--border); overflow:hidden;">
+        <img src="Logo.png" alt="Logo" style="width:70%; height:70%; object-fit:contain;">
+      </span>
+      <span style="font-weight:700; letter-spacing:0.06em;">NNZ</span>
+    </a>
+  </div>
+
+  <!-- Center -->
+  <div style="justify-self:center;">
+    <a class="btn" href="Merch.html" style="padding:10px 14px;">Rep your side.</a>
+  </div>
+
+  <!-- Right -->
+  <nav aria-label="Primary" style="display:flex; align-items:center; gap:10px; justify-self:end;">
+    <a class="btn" href="About.html" style="padding:10px 14px;">What it is.</a>
+    <a class="btn" href="Contact.html" style="padding:10px 14px;">How to reach us.</a>
+  </nav>
+</header>
+
+  <div class="layout" style="min-height:calc(100vh - 72px);">
+
+    <aside class="sidebar" aria-label="Socials"
+      style="height:calc(100vh - 72px); top:72px; position:sticky; padding-top:16px;">
+
+      <div class="socials" style="margin-top:10px; width:100%; align-items:center; position:relative; height:520px;">
+  <!-- YT at 75% -->
+  <a class="social" data-social
+     data-label="YouTube"
+     data-href="https://www.youtube.com/"
+     data-embed="https://www.youtube.com/embed?listType=user_uploads&list=Google"
+     href="https://www.youtube.com/" aria-label="YouTube"
+     style="position:absolute; left:50%; top:25%; transform:translate(-50%,-50%);">
+    <img src="YT.png" alt="" />
+  </a>
+
+  <!-- IG at 50% -->
+  <a class="social" data-social
+     data-label="Instagram"
+     data-href="https://www.instagram.com/NoNeutralZone"
+     data-embed="https://www.instagram.com/NoNeutralZone"
+     href="https://www.instagram.com/NoNeutralZone" aria-label="Instagram"
+     style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);">
+    <img src="IG.png" alt="" />
+  </a>
+
+  <!-- X at 25% -->
+  <a class="social" data-social
+     data-label="X / Twitter"
+     data-href="https://x.com/NoNeutralZone"
+     data-embed="https://x.com/NoNeutralZone"
+     href="https://x.com/NoNeutralZone" aria-label="X"
+     style="position:absolute; left:50%; top:75%; transform:translate(-50%,-50%);">
+    <img src="X.png" alt="" />
+  </a>
+</div>
+    </aside>
+
+    <main class="content" style="align-items:flex-start; padding-top:34px;">
+      <div class="shell" style="text-align:center;">
+
+        <section class="page" aria-label="Merch" style="width:min(920px, 100%); text-align:left;">
+          <h2>Rep your side</h2>
+          <p>Merch page placeholder — keep it minimal.</p>
+
+          <div class="grid">
+            <div class="card">
+              <div class="k">Item</div>
+              <div class="v">Core Tee</div>
+              <p>Placeholder. Add image + price.</p>
+            </div>
+            <div class="card">
+              <div class="k">Item</div>
+              <div class="v">Side Hoodie</div>
+              <p>Placeholder. Add image + price.</p>
+            </div>
+            <div class="card">
+              <div class="k">Item</div>
+              <div class="v">Rink Cap</div>
+              <p>Placeholder. Add image + price.</p>
+            </div>
+          </div>
+
+          <div class="actions" style="justify-content:flex-start; margin-top:18px;">
+            <a class="btn" href="index.html">Back</a>
+            <a class="btn primary" href="Contact.html">Order / Questions</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Hover preview (iframe). Some social sites block embedding; in that case it may show blank. -->
+  <div class="preview" id="preview" aria-hidden="true" style="top:84px;">
+    <div class="previewHeader">
+      <div class="title" id="previewTitle">Preview</div>
+      <div class="hint">Esc to close</div>
+    </div>
+    <iframe id="previewFrame" title="Social preview" loading="lazy" referrerpolicy="no-referrer"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
