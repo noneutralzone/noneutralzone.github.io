@@ -82,24 +82,45 @@
             Add your email or keep a simple form. (Front-end only.)
           </p>
 
-          <form class="form" onsubmit="event.preventDefault(); alert('Form placeholder — connect a backend to send messages.');">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="msg">Message</label>
-              <textarea id="msg" name="msg" placeholder="What’s up?"></textarea>
-            </div>
-            <div class="actions" style="justify-content:flex-start;">
-              <button class="btn primary" type="submit">Send</button>
-              <a class="btn" href="index.html">Back</a>
-            </div>
-          </form>
+          <form class="form" id="contactForm">
+  <div class="field">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+  </div>
+
+  <div class="field">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+  </div>
+
+  <div class="field">
+    <label for="msg">Message</label>
+    <textarea id="msg" name="msg" placeholder="What’s up?" required></textarea>
+  </div>
+
+  <div class="actions" style="justify-content:flex-start;">
+    <button class="btn primary" type="submit">Send</button>
+    <a class="btn" href="index.html">Back</a>
+  </div>
+</form>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const msg = document.getElementById("msg").value.trim();
+
+    const subject = encodeURIComponent("NNZ Contact Form");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}\n`
+    );
+
+    window.location.href = `mailto:jess@noneutralzone.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
         </section>
 
       </div>
