@@ -80,9 +80,7 @@
   });
 
   const mq = window.matchMedia("(max-width: 720px)");
-  if(mq.addEventListener){
-    mq.addEventListener('change', ()=>{ if(!mq.matches) setExpanded(false); });
-  } else if (mq.addListener){
-    mq.addListener(()=>{ if(!mq.matches) setExpanded(false); });
-  }
+  const closeIfDesktop = ()=>{ if(!mq.matches) setExpanded(false); };
+  if(mq.addEventListener) mq.addEventListener('change', closeIfDesktop);
+  else if(mq.addListener) mq.addListener(closeIfDesktop);
 })();

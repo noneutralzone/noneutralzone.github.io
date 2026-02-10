@@ -355,16 +355,9 @@ input:focus, textarea:focus{
   border-color:var(--border2);
 }
 .hamburger:active{transform:translateY(0px);}
-.hamburgerLines{
-  width:22px;
-  height:14px;
-  position:relative;
-}
+.hamburgerLines{ width:22px; height:14px; position:relative; }
 .hamburgerLines span{
-  position:absolute;
-  left:0;
-  right:0;
-  height:2px;
+  position:absolute; left:0; right:0; height:2px;
   background:rgba(255,255,255,0.92);
   border-radius:999px;
 }
@@ -383,9 +376,10 @@ input:focus, textarea:focus{
     align-items:center !important;
     gap:10px !important;
   }
+
+  /* Hide the center Rep button on mobile (it will appear inside the menu) */
   .topbar .centerSlot{
-    grid-column:1 / -1 !important;
-    justify-self:start !important;
+    display:none !important;
   }
 
   .hamburger{
@@ -402,15 +396,15 @@ input:focus, textarea:focus{
     align-items:stretch !important;
     padding-top:6px !important;
   }
-  body.menu-open .topbar nav{
-    display:flex !important;
-  }
+  body.menu-open .topbar nav{ display:flex !important; }
+
   .topbar nav .btn{
     width:100% !important;
     text-align:left !important;
     padding:12px 14px !important;
   }
 
+  /* Sidebar becomes horizontal socials strip */
   .sidebar{
     width:100% !important;
     height:auto !important;
@@ -437,8 +431,6 @@ input:focus, textarea:focus{
 
   .content{padding:18px 14px !important; align-items:stretch !important;}
   .shell{width:100% !important; align-items:stretch !important;}
-
   .hero img{max-width:100% !important; height:auto !important;}
-
   .preview{display:none !important;}
 }
