@@ -24,12 +24,18 @@
   </div>
 
   <!-- Center -->
-  <div style="justify-self:center;">
+  <div class="centerSlot" style="justify-self:center;">
     <a class="btn" href="Merch.html" style="padding:10px 14px;">Rep your side.</a>
   </div>
 
+  <button class="hamburger" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <div class="hamburgerLines" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </button>
+
   <!-- Right -->
-  <nav aria-label="Primary" style="display:flex; align-items:center; gap:10px; justify-self:end;">
+  <nav id="mobileMenu" aria-label="Primary" style="display:flex; align-items:center; gap:10px; justify-self:end;">
     <a class="btn" href="About.html" style="padding:10px 14px;">What it is.</a>
     <a class="btn" href="Contact.html" style="padding:10px 14px;">How to reach us.</a>
   </nav>

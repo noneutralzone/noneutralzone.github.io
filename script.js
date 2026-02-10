@@ -54,3 +54,35 @@
     if(e.key === 'Escape') hide();
   });
 })();
+
+
+/* NNZ_MENU_TOGGLE */
+(function(){
+  const btn = document.getElementById('menuBtn');
+  if(!btn) return;
+
+  function setExpanded(on){
+    document.body.classList.toggle('menu-open', on);
+    btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+
+  btn.addEventListener('click', ()=>{
+    const on = !document.body.classList.contains('menu-open');
+    setExpanded(on);
+  });
+
+  document.querySelectorAll('.topbar nav a').forEach(a=>{
+    a.addEventListener('click', ()=> setExpanded(false));
+  });
+
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape') setExpanded(false);
+  });
+
+  const mq = window.matchMedia("(max-width: 720px)");
+  if(mq.addEventListener){
+    mq.addEventListener('change', ()=>{ if(!mq.matches) setExpanded(false); });
+  } else if (mq.addListener){
+    mq.addListener(()=>{ if(!mq.matches) setExpanded(false); });
+  }
+})();
