@@ -336,7 +336,7 @@ input:focus, textarea:focus{
   .preview{display:none !important;} /* many social sites block iframes anyway */
 }
 
-/* Hamburger + mobile menu */
+/* Hamburger + mobile menu (single "Rep your side") */
 .hamburger{
   display:none;
   width:46px;
@@ -365,7 +365,9 @@ input:focus, textarea:focus{
 .hamburgerLines span:nth-child(2){top:6px;}
 .hamburgerLines span:nth-child(3){top:12px;}
 
-/* Mobile adjustments (menu) */
+/* Desktop: center button shown; rep item in nav hidden */
+.nav-rep{ display:none; }
+
 @media (max-width: 720px){
   .layout{flex-direction:column !important; min-height:auto !important;}
 
@@ -377,10 +379,9 @@ input:focus, textarea:focus{
     gap:10px !important;
   }
 
-  /* Hide the center Rep button on mobile (it will appear inside the menu) */
-  .topbar .centerSlot{
-    display:none !important;
-  }
+  /* Mobile: hide centered rep button, show rep inside menu */
+  .topbar .centerSlot{ display:none !important; }
+  .nav-rep{ display:inline-flex !important; }
 
   .hamburger{
     display:inline-flex !important;
